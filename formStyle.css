@@ -1,0 +1,94 @@
+:root{
+    --formcontainer-width: 28em;
+    --formcontainer-height: 28em;
+    --form-border: rgb(229, 231, 235);
+    --form-background: rgba(245, 243, 244, 0.5);
+    --button-background: rgb(124, 89, 32);
+    --button-hover-background:rgb(99, 69, 20);
+    --button-color: white;
+}
+.content{
+    position: relative;
+}
+.formContainer {    
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: calc(50% - var(--formcontainer-height)/2);
+    left: calc(50% - var(--formcontainer-width)/2)
+}
+
+.myForm {
+    background-color: var(--form-background);
+    
+    line-height: 24px;
+    width: var(--formcontainer-width);
+    height: var(--formcontainer-height);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--form-border);
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+    box-sizing: border-box;
+}
+
+
+
+input,
+select {
+    border: 1px solid var(--form-border);
+    border-radius: 0.1rem;
+    height: 2.5rem;
+}
+
+input, select {
+    padding-left: 0.2em;
+    margin-bottom: 1.5em;
+}
+
+label{
+    font-family: 'Inter', sans-serif;
+}
+
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.container {
+    transition: filter 0.5s ease;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+#close {
+    position: absolute;
+    left: 92%;
+    bottom: 92%;
+    margin: 0;
+    width: 1.5em;
+    height: 0;
+    padding-bottom: 1.5em;
+    border: 1px solid rgba(25, 67, 89, 255);
+}
+
+#submitButton {
+    height: 2.5rem;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 1px;
+    border-radius: 0.1em;
+    border: none;
+    background-color: var(--button-background);
+    color: var(--button-color);
+}
+
+#submitButton:hover{
+    background-color: var(--button-hover-background);
+    cursor: pointer;
+}
