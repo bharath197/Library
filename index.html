@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,52 @@
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="formStyle.css">
 </head>
+
 <body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 h-5 w-5 text-gray-400 group-hover:text-gray-500 dark:text-gray-300 dark:group-hover:text-gray-400 text-gray-500 group-hover:text-gray-700"
+                role="img" aria-labelledby="aa0w6kc0fdsnxa1r1g98x9b3l40rntdr">
+                <title id="aa0w6kc0fdsnxa1r1g98x9b3l40rntdr">theme icon</title>
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z">
+                </path>
+            </svg>
+
+        </nav>
+        <div class="content">
+            <h1>Personal Library</h1>
+            <button id="addBooks">Add Book</button>
+            <div class="list"></div>
+        </div>
+        <footer>
+            <p>Bharath | <a href="">Source code</a></p>
+        </footer>
+    </div>
+    <div class="formContainer" style="display: none;">
+        <form action="" class="myForm">
+            <button type="reset" id="close">&#10006</button>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" />
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" />
+            <label for="pages">Pages</label>
+            <input type="number" name="pages" id="page" />
+            <label for="status">Completed?</label>
+            <select name="status" id="status">
+                <option value="Not read yet">Not read yet</option>
+                <option value="read">read</option>
+            </select>
+            <button type="submit" id="submitButton">submit</button>
+        </form>
+    </div>    
     <script src="app.js"></script>
 </body>
+
 </html>
