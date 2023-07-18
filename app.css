@@ -1,151 +1,164 @@
 * {
-    margin: 0;
-    padding: 0;
-    
-  }
-  
-  :root {
-    --navbar-font: "Poppins", sans-serif;
-    --navbar-background: #333333;
-    --navbar-color: #ffffff;
-    --change-mode: white;
-    --font-color: black;
-    --add-button-background: rgb(124, 89, 32);
-    --add-button-hover-background: rgb(99, 69, 20);
-    --add-button-color: white;
-    --add-button-font: "Poppins", sans-serif;
-    --books-font: 'Inter', sans-serif;
-    --books-background: #dee2e6;
-    --books-color: #0d3b66;
-    --formcontainer-width: 28em;
-    --formcontainer-height: 28em;
-    --form-border: rgb(229, 231, 235);
-    --button-background: rgb(124, 89, 32);
-    --button-hover-background:rgb(99, 69, 20);
-    --button-color: white;
-  }
-  
-  /* container */
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  /* navbar */
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 3rem;
-    padding: 0 1rem;
-    background-color: var(--navbar-background);
-  }
-  
-  ul {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  li>a {
-    font-family: var(--navbar-font);
-    color: var(--navbar-color);
-    text-decoration: none;
-  }
-  
-  svg {
-    height: 50%;
-    color: var(--change-mode);
-  }
-  
-  h1 {
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    margin: 20px auto;
-  }
-  
-  /* content */
-  
-  .content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #addBooks {
-    font-family: var(--add-button-font);
-    width: 100px;
-    padding: 8px 16px;
-    border-radius: 6px;
-    border: none;
-    background-color: var(--add-button-background);
-    color: var(--add-button-color);
-    margin: 1rem auto;
-  }
-  
-  #addBooks:hover {
-    cursor: pointer;
-    background-color: var(--add-button-hover-background);
-  }
-  
-  .list {
-    margin: 0 2rem;
-    margin-top: 50px;
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    gap: 1em;
-    flex-wrap: wrap;
-  }
-  
-  /* footer */
-  
-  footer {
-    font-family: var(--navbar-font);
-    background-color: var(--navbar-background);
-    background-color: var(--navbar-background);
-    color: var(--navbar-color);
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  p>a {
-    color: var(--navbar-color);
-    text-decoration: none;
-  }
-  
-  /* added books */
-  
-  .addedBooks > p{
-    font-family: var(--books-font);
-    text-transform: capitalize;
-    border-bottom: 1px solid var(--form-border);
-    font-weight: 500;
-    font-size: 1em;
-    text-align: center;
-    padding-bottom: 0.5rem;
-  }
-  .addedBooks>p:last-of-type{
-    padding-bottom: 0;
-  }
-  .addedBooks span{
-    font-size: 0.7em;
-    font-style: italic;
-  }
-  .addedBooks{
-    border: 1px solid var(--form-border);
-    padding: 1.5rem;
-    background-color: var(--books-background);
-    color: var(--books-color);
-    border-radius: 2px;
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
-  }
+  margin: 0;
+  padding: 0;
+
+}
+
+:root {
+  --navbar-font: "Poppins", sans-serif;
+  --navbar-background: #333333;
+  --navbar-color: #ffffff;
+  --change-mode: white;
+  --font-color: black;
+  --add-button-background: rgb(124, 89, 32);
+  --add-button-hover-background: rgb(99, 69, 20);
+  --add-button-color: white;
+  --add-button-font: "Poppins", sans-serif;
+  --books-font: 'Inter', sans-serif;
+  --books-background: #dee2e6;
+  --books-color: #0d3b66;
+  --formcontainer-width: 28em;
+  --formcontainer-height: 28em;
+  --form-border: rgb(229, 231, 235);
+  --button-background: rgb(124, 89, 32);
+  --button-hover-background: rgb(99, 69, 20);
+  --button-color: white;
+}
+
+/* container */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  padding: 0 1rem;
+  background-color: var(--navbar-background);
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+
+li>a {
+  font-family: var(--navbar-font);
+  color: var(--navbar-color);
+  text-decoration: none;
+}
+
+svg {
+  height: 50%;
+  color: var(--change-mode);
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+/* content */
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#addBooks {
+  font-family: var(--add-button-font);
+  width: 100px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--add-button-background);
+  color: var(--add-button-color);
+  margin: 1rem auto;
+}
+
+#addBooks:hover {
+  cursor: pointer;
+  background-color: var(--add-button-hover-background);
+}
+
+.list {
+  margin: 0 2rem;
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+/* footer */
+
+footer {
+  font-family: var(--navbar-font);
+  background-color: var(--navbar-background);
+  background-color: var(--navbar-background);
+  color: var(--navbar-color);
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p>a {
+  color: var(--navbar-color);
+  text-decoration: none;
+}
+
+/* added books */
+
+.addedBooks>p {
+  font-family: var(--books-font);
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--form-border);
+  font-weight: 500;
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+
+
+.addedBooks span {
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+.addedBooks {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--form-border);
+  padding: 1.5rem;
+  background-color: var(--books-background);
+  color: var(--books-color);
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+}
+
+.addedBooks>button {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--button-background);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+}

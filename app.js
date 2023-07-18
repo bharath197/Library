@@ -15,8 +15,16 @@ function addBookToLibrary(){
     <p><span>by</span>
     </p><p>${myLibrary[myLibrary.length-1].author}</p>
     <p>${myLibrary[myLibrary.length-1].pages} pages</p>
-    <p>${myLibrary[myLibrary.length-1].status}</p>`
+    <p>${myLibrary[myLibrary.length-1].status}</p><button class='removeButton'>Remove</button>`
     list.appendChild(addedBook)
+    addedBook.setAttribute('data-index-number', myLibrary.length-1)
+    
+    const removeButton= document.querySelectorAll('.removeButton')
+    removeButton.forEach(button => {
+      button.addEventListener('click', () => {
+        console.log('Remove button clicked');        
+      });
+    });
 }
 
 function displayForm(){
@@ -32,7 +40,6 @@ function closeForm(){
 }
 
 
-
 const container = document.querySelector('.container')
 const content = document.querySelector('.content')
 const addBooks = document.querySelector('#addBooks')
@@ -41,6 +48,7 @@ const formContainer = document.querySelector('.formContainer')
 const myForm = document.querySelector('.myForm')
 const close = document.querySelector('#close')
 const submit = document.querySelector('#submitButton')
+
 
 addBooks.addEventListener('click', displayForm)
 close.addEventListener('click', closeForm)
@@ -56,3 +64,7 @@ submit.addEventListener('click', (event)=>{
     closeForm();
     addBookToLibrary();
 })
+
+
+
+
