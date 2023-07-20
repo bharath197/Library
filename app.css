@@ -135,7 +135,9 @@ p>a {
   padding-bottom: 0.5rem;
 }
 
-
+.addedBooks > * {
+  flex-grow: 1;
+}
 
 .addedBooks span {
   font-size: 0.7em;
@@ -143,6 +145,7 @@ p>a {
 }
 
 .addedBooks {
+  width: 150px;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--form-border);
@@ -153,7 +156,26 @@ p>a {
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
 }
 
-.addedBooks>button {
+.status{
+  display: flex;
+  padding-bottom: 0.5rem;
+}
+.status > button {
+  height: 1.5rem;
+  width: 50%;
+}
+
+.highlight{
+  background-color: #023047;
+  color: white;
+  border: none;
+}
+
+.notHighlight{
+  border: none;
+}
+
+.addedBooks  .removeButton {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--button-background);
@@ -161,4 +183,10 @@ p>a {
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
+  flex-grow: 0;
+}
+
+.removeButton:hover{
+  background-color: var(--button-hover-background);
+  cursor: pointer;
 }
