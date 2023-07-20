@@ -6,8 +6,12 @@ function Books(title, author, pages, status) {
   this.pages = pages;
   this.status = status;
   this.info = () => {
-    return `${this.title} by ${this.author}, ${this.pages} pages, ${status}`;
+    return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status}`;
   };
+}
+
+Books.prototype.switchStatus = function(){
+  this.status = (this.status === 'read') ? 'not read' : 'read';
 }
 
 function displayForm() {
@@ -56,6 +60,19 @@ function handleRemoveandStatus(e){
     myLibrary.splice(index, 1);
     bookCard.remove()
   }
+  if(e.target.className === 'notHighlight'){
+    // switching the highlight
+    const highlightedButton = !!e.target.nextElementSibling ? e.target.nextElementSibling : e.target.previousElementSibling
+    highlightedButton.classList.remove('highlight')
+    highlightedButton.classList.add('notHighlight')
+    e.target.classList.add('highlight')
+    // changing in the library
+    const parentCard = e.target.closest('.addedBooks')
+    const index = parentCard.getAttribute('data-index-number')
+    console.log(myLibrary[index].status)
+    myLibrary[index].switchStatus();
+    console.log(myLibrary[index].status)
+  }
 }
 
 const container = document.querySelector('.container')
@@ -73,16 +90,11 @@ addBooks.addEventListener('click', displayForm)
 close.addEventListener('click', closeForm)
 
 submit.addEventListener('click', (event) => {
-  console.log('click')
   event.preventDefault()
   let title = myForm.elements.title.value
   let author = myForm.elements.author.value
   let pages = myForm.elements.pages.value
   let status = myForm.elements.status.value
-  console.log(!!title || !!author || pages)
-  if(!!title || !!author || pages){
-    alert('please fill the form')
-  }
   let book = new Books(title, author, pages, status)
   myLibrary.push(book)
   myForm.reset();
