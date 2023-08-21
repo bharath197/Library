@@ -1,26 +1,60 @@
-:root{
+:root.dark{
     --formcontainer-width: 28em;
     --formcontainer-height: 28em;
-    --form-border: rgb(229, 231, 235);
-    --form-background: rgba(245, 243, 244, 0.5);
+
+    --form-border: rgb(51, 64, 81);
+    --form-background: rgb(31, 41, 55);
+    --form-text-color: white;
+
+    --input-background-color: rgb(55, 65, 81, 0.5);
+    --input-border: rgb(31, 41, 55);
+    --input-text-color: white;
+
     --button-background: rgb(124, 89, 32);
     --button-hover-background:rgb(99, 69, 20);
     --button-color: white;
+
+    --close-button-background: rgb(55, 65, 81, 0.5);
+    --close-color: white;
+    --close-border: rgb(51, 64, 81);
 }
+
+:root.light{
+    --formcontainer-width: 28em;
+    --formcontainer-height: 28em;
+
+    --form-background: #fff;
+    --form-border: rgb(249, 250, 251);
+    --form-text-color: #333333;
+
+    --input-background-color:  #fff;
+    --input-border: rgb(209, 213, 219);
+    --input-text-color: #333333;
+
+    --button-background: rgb(124, 89, 32);
+    --button-hover-background:rgb(99, 69, 20);
+    --button-color: white;
+
+    --close-button-background: #fff;
+    --close-color: #333333;
+    --close-border: rgb(209, 213, 219);
+}
+
 .content{
     position: relative;
 }
+
 .formContainer {    
     margin-left: auto;
     margin-right: auto;
     position: absolute;
     top: calc(50% - var(--formcontainer-height)/2);
-    left: calc(50% - var(--formcontainer-width)/2)
+    left: calc(50% - var(--formcontainer-width)/2);
+    color: var(--form-text-color);
 }
 
 .myForm {
-    background-color: var(--form-background);
-    
+    background-color: var(--form-background);    
     line-height: 24px;
     width: var(--formcontainer-width);
     height: var(--formcontainer-height);
@@ -28,6 +62,7 @@
     display: flex;
     flex-direction: column;
     border: 1px solid var(--form-border);
+    border-radius: 8px;
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
     box-sizing: border-box;
@@ -37,9 +72,13 @@
 
 input,
 select {
-    border: 1px solid var(--form-border);
+    color: var(--input-text-color);
+    background-color: var(--input-background-color);
+
+    border: 1px solid var(--input-border);
     border-radius: 0.1rem;
     height: 2.5rem;
+    border-radius: 0.5rem;
 }
 
 input, select {
@@ -74,7 +113,10 @@ label {
     width: 1.5em;
     height: 0;
     padding-bottom: 1.5em;
-    border: 1px solid rgba(25, 67, 89, 255);
+    background-color: var(--close-button-background);
+    color: var(--close-color);
+    border: 1px solid var(--close-border);
+    border-radius: 0.1em;
 }
 
 #submitButton {
@@ -82,7 +124,7 @@ label {
     margin-top: 10px;
     font-size: 14px;
     padding: 1px;
-    border-radius: 0.1em;
+    border-radius: 0.5em;
     border: none;
     background-color: var(--button-background);
     color: var(--button-color);
